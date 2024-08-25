@@ -1,0 +1,77 @@
+body{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/044/280/984/small_2x/stack-of-books-on-a-brown-background-concept-for-world-book-day-photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.feature-book-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f2f8f2;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-book-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .feature-book-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .feature-book-form input,
+  .feature-book-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .feature-book-form input:focus,
+  .feature-book-form textarea:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+  }
+  
+  .feature-book-form button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .feature-book-form button:hover {
+    background-color: #218838;
+  }
+  
+  .feature-book-form .form-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+#home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: small;
+    color: #faf9f9;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #656768;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }

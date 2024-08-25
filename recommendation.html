@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recommendations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <section class="section recommendations" id="recommendations">
+      <div class="container">
+        <h2 class="h2 section-title">Book Recommendations</h2>
+        <div class="filter-section">
+          <label for="genre">Filter by Genre:</label>
+          <select id="genre" class="filter-select" onchange="filterBooks()">
+            <option value="all">All</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="drama">Drama</option>
+            <option value="horror">Horror</option>
+            <option value="mystery">Mystery/Thriller</option>
+            <option value="science-fiction">Science Fiction</option>
+            <option value="romance">Romance</option>
+          </select>
+        </div>
+
+        <ul class="book-list" id="book-list">
+          <li class="book-item" data-genre="fantasy" id="fantasy">
+            <img src="https://panmacmillan.co.in/Images/books/MediumImage/9780330458535.jpg" alt="The Palace Of Illusions" class="book-image">
+            <div class="book-details">
+              <h3 class="book-title">The Palace Of Illusions</h3>
+              <p class="book-author">by Chitra Banerjee Divakaruni</p>
+              <p class="book-description">A rendition of the Hindu epic Mahabharata as told from Draupadi's viewpoint.</p>
+            </div>
+          </li>
+
+          <li class="book-item" data-genre="drama" id="drama">
+            <img src="https://img.etimg.com/photo/msid-98117645,imgsize-73706/TheAlchemistbyPauloCoelho.jpg" alt="The Alchemist" class="book-image">
+            <div class="book-details">
+              <h3 class="book-title">The Alchemist</h3>
+              <p class="book-author">by Paulo Coelho</p>
+              <p class="book-description">A Spanish shepherd boy travels to Egypt in search of treasure and his Personal Legend.</p>
+            </div>
+          </li>
+
+          <li class="book-item" data-genre="horror" id="horror">
+            <img src="https://images.thalia.media/-/BF2000-2000/f59e59bc6fe84cb49fcd8b7238140d1b/carrie-taschenbuch-stephen-king.jpeg" alt="Carrie" class="book-image">
+            <div class="book-details">
+              <h3 class="book-title">Carrie</h3>
+              <p class="book-author">by Stephen King</p>
+              <p class="book-description">A bullied high-school girl discovers she has telekinetic powers.</p>
+            </div>
+          </li>
+
+          <li class="book-item" data-genre="mystery" id="mystery">
+            <img src="https://m.media-amazon.com/images/I/61Sx28fdUoL._AC_UF1000,1000_QL80_.jpg" alt="Gone Girl" class="book-image">
+            <div class="book-details">
+              <h3 class="book-title">Gone Girl</h3>
+              <p class="book-author">by Gillian Flynn</p>
+              <p class="book-description">A psychological thriller that examines the dynamics of marriage and lies.</p>
+            </div>
+          </li>
+
+          <li class="book-item" data-genre="science-fiction" id="science-fiction">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405546838i/77566.jpg" alt="Hyperion" class="book-image">
+            <div class="book-details">
+              <h3 class="book-title">Hyperion</h3>
+              <p class="book-author">by Dan Simmons</p>
+              <p class="book-description">A science fiction novel featuring seven pilgrims on a mysterious journey.</p>
+            </div>
+          </li>
+
+          <li class="book-item" data-genre="romance" id="romance">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTMtIHKz6P5NlEdwV3Mt1lL_fkoqXTj57c8hf-xXO06O6fIE3Gr" alt="Sapiens" class="book-image">
+            <div class="book-details">
+              <h3 class="book-title">Happy Place</h3>
+              <p class="book-author">by Emily Henry</p>
+              <p class="book-description">A couple discovers along the way what finding your “happy place” really means.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function filterBooks() {
+  const genre = document.getElementById('genre').value;
+  const books = document.querySelectorAll('.book-item');
+
+  books.forEach(book => {
+    if (genre === 'all' || book.getAttribute('data-genre') === genre) {
+      book.style.display = 'block';
+    } else {
+      book.style.display = 'none';
+    }
+  });
+}
+
+  </script>
+
+</body>
+
+</html>

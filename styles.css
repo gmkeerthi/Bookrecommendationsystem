@@ -1,0 +1,80 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:hsl(20, 43%, 93%);
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://img.freepik.com/free-vector/abstract-watercolor-pastel-background_87374-126.jpg'); */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .filter-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .book-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .book-details {
+    margin-top: 15px;
+  }
+  
+  .book-title {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #2c3e50;
+  }
+  
+  .book-author {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .book-description {
+    font-size: 14px;
+    color: #555;
+  }
+  

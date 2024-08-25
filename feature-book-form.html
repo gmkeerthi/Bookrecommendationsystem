@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feature Your Book</title>
+  <link rel="stylesheet" href="feature.css">
+</head>
+
+<body>
+  <header>
+    <a href="demo.html" id="home">Back to Main Page</a>
+  </header>
+
+  <main>
+    <section class="form-section">
+        <div class="feature-book-form form-section">
+            <h2>Feature Your Book</h2>
+            <form id="feature-book-form" action="feature-book-form-handler.php" method="post">
+              <label for="book-title">Book Title</label>
+              <input type="text" id="book-title" name="title" required>
+              
+              <label for="book-author">Author</label>
+              <input type="text" id="book-author" name="author" required>
+              
+              <label for="book-description">Description</label>
+              <textarea id="book-description" name="description" rows="4" required></textarea>
+              
+              <label for="book-cover">Cover Image URL</label>
+              <input type="url" id="book-cover" name="cover_url" required>
+              
+              <button type="submit">Submit</button>
+              <div class="form-message" id="feature-book-form-message"></div>
+            </form>
+          </div>
+      </form>
+      <p id="form-message" class="form-message"></p>
+    </section>
+  </main>
+
+  <script>
+    // Feature Your Book Form Validation and Submission
+document.addEventListener('DOMContentLoaded', () => {
+  const featureBookForm = document.getElementById('feature-book-form');
+  const featureBookFormMessage = document.getElementById('feature-book-form-message');
+
+  if (featureBookForm) {
+    featureBookForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const title = featureBookForm.querySelector('#book-title').value.trim();
+      const author = featureBookForm.querySelector('#book-author').value.trim();
+      const description = featureBookForm.querySelector('#book-description').value.trim();
+      const coverUrl = featureBookForm.querySelector('#book-cover').value.trim();
+
+      if (title === '' || author === '' || description === '' || coverUrl === '') {
+        featureBookFormMessage.textContent = 'Please fill out all fields.';
+        featureBookFormMessage.style.color = 'red';
+      } else if (!validateUrl(coverUrl)) {
+        featureBookFormMessage.textContent = 'Please enter a valid URL for the cover image.';
+        featureBookFormMessage.style.color = 'red';
+      } else {
+        featureBookFormMessage.textContent = 'Your book has been submitted for review!';
+        featureBookFormMessage.style.color = 'green';
+        // Simulate form submission
+        setTimeout(() => {
+          featureBookForm.reset();
+        }, 1000);
+      }
+    });
+  }
+
+  // Helper function to validate URL
+  function validateUrl(url) {
+    const re = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+    return re.test(url);
+  }
+});
+
+
+  </script>
+</body>
+
+</html>
